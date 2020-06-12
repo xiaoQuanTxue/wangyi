@@ -10,8 +10,8 @@
 			<property name="suppressAllComments" value="true" />
 		</commentGenerator>
 		<!-- 配置数据库连接 -->
-		<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/shopping?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=GMT"
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/wangyi?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=GMT"
 			userId="root"
 			password="123456">
 		</jdbcConnection>
@@ -42,7 +42,7 @@
 
 
 		<!-- table指定每个表的生成策略 -->
-		<table tableName="users" domainObjectName="Users"></table>
+		<table tableName="lecturer" domainObjectName="Lecturer"></table>
 
 	</context>
 </generatorConfiguration>
