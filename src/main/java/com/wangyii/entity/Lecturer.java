@@ -30,4 +30,13 @@ public class Lecturer {
     public void setLecturepassword(String lecturepassword) {
         this.lecturepassword = lecturepassword == null ? null : lecturepassword.trim();
     }
+
+    @Override
+    public String toString() {
+        return "Lecturer{" +
+                "id=" + id +
+                ", lecturername='" + lecturername + '\'' +
+                ", lecturepassword='" + lecturepassword + '\'' +
+                '}';
+    }
 }

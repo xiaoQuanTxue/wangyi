@@ -10,15 +10,22 @@ import java.util.List;
 
 @Service
 public class LecturerService {
-    @Autowired
-    LecturerExample lecturerExample;
+
     @Autowired
     LecturerMapper lecturerMapper;
 
     public int varifyLecturer(String lname,String lpwd){
 
+        System.out.println(lname+","+lpwd);
+        LecturerExample lecturerExample=new LecturerExample();
         lecturerExample.createCriteria().andLecturepasswordEqualTo(lpwd).andLecturernameEqualTo(lname);
         List<Lecturer> list  =lecturerMapper.selectByExample(lecturerExample);
+        System.out.println(list);
         return list.size();
+    }
+
+    public List<Lecturer> getAll(){
+        return  lecturerMapper.selectAll();
+
     }
 }

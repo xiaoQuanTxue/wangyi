@@ -4,6 +4,7 @@ import com.wangyii.entity.Lecturer;
 import com.wangyii.entity.LecturerExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -29,4 +30,6 @@ public interface LecturerMapper {
     int updateByPrimaryKeySelective(Lecturer record);
 
     int updateByPrimaryKey(Lecturer record);
+    @Select("select * from lecturer")
+    List<Lecturer> selectAll();
 }
